@@ -1,7 +1,7 @@
 %define  debug_package %{nil}
 Name: libnetwork
 Version: 0.8.0.dev.2
-Release: 102
+Release: 103
 Summary: Proxy used for docker port mapping
 License: Apache License 2.0
 URL: https://github.com/docker/libnetwork
@@ -18,6 +18,7 @@ Obsoletes: docker-proxy
 
 %build
 cd libnetwork-d00ceed44cc447c77f25cdf5d59e83163bdcb4c9
+export GO111MODULE=off
 export CGO_ENABLED=0
 export GOPATH=`pwd`/.gopath
 mkdir -p $GOPATH/src/github.com/docker/
@@ -41,11 +42,17 @@ install -p -m 755 libnetwork-d00ceed44cc447c77f25cdf5d59e83163bdcb4c9/docker-pro
 %{_bindir}/docker-proxy
 
 %changelog
- * Thu Mar 18 2021 xiadanni<xiadanni1@huawei.com> 0.8.0.dev.2-102
- - Type:bugfix
- - Id:NA
- - SUG:NA
- - DESC:compile option compliance
+* Mon Jan 10 2022 xiadanni<xiadanni1@huawei.com> 0.8.0.dev.2-103
+- Type:bugfix
+- Id:NA
+- SUG:NA
+- DESC:disable go module build
+
+* Thu Mar 18 2021 xiadanni<xiadanni1@huawei.com> 0.8.0.dev.2-102
+- Type:bugfix
+- Id:NA
+- SUG:NA
+- DESC:compile option compliance
 
 * Thu Aug 20 2020 xiadanni<xiadanni1@huawei.com> 0.8.0.dev.2-101
 - Type:cleancode
