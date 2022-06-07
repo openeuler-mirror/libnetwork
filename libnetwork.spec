@@ -1,9 +1,9 @@
 %define  debug_package %{nil}
 Name: libnetwork
 Version: 0.8.0.dev.2
-Release: 103
+Release: 104
 Summary: Proxy used for docker port mapping
-License: Apache License 2.0
+License: CC-BY-SA-4.0 and MIT and Apache-2.0 and MPL-2.0
 URL: https://github.com/docker/libnetwork
 Source: libnetwork-d00ceed.tar.gz
 BuildRequires: golang >= 1.8.3
@@ -42,6 +42,9 @@ install -p -m 755 libnetwork-d00ceed44cc447c77f25cdf5d59e83163bdcb4c9/docker-pro
 %{_bindir}/docker-proxy
 
 %changelog
+* Fri May 20 2022 liukuo <liukuo@kylinos.cn> - 0.8.0.dev.2-104
+- License compliance rectification
+
 * Mon Jan 10 2022 xiadanni<xiadanni1@huawei.com> 0.8.0.dev.2-103
 - Type:bugfix
 - Id:NA
