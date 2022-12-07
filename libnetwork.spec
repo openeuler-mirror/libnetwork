@@ -63,7 +63,7 @@ install -p -m 755 libnetwork-d00ceed44cc447c77f25cdf5d59e83163bdcb4c9/docker-pro
 - SUG:NA
 - DESC:modify source code struct
 
-* Sat Aug 19 2019 songnannan<songnannan2@huawei.com> 0.8.0.dev.2-2.h1
+* Mon Sep 30 2019 songnannan<songnannan2@huawei.com> 0.8.0.dev.2-2.h1
 - Type:bugfix
 - Id:NA
 - SUG:NA
