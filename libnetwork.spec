@@ -30,7 +30,7 @@ CGO_CPPFLAGS="-fstack-protector-strong -fPIE" \
 CGO_LDFLAGS_ALLOW='-Wl,-z,relro,-z,now' \
 CGO_LDFLAGS="-Wl,-z,relro,-z,now -Wl,-z,noexecstack" \
 %if "%toolchain" == "clang"
-	go build -buildmode=pie -ldflags="-linkmode=external -s -w -buildid=IdByIsula " -o docker-proxy ./cmd/proxy
+	go build -buildmode=pie -ldflags="-linkmode=external -s -w -buildid=IdByIsula -extldflags=-Wl,-z,relro,-z,now " -o docker-proxy ./cmd/proxy
 %else 
 	go build -buildmode=pie -ldflags="-linkmode=external -s -w -buildid=IdByIsula -extldflags=-zrelro -extldflags=-znow " -o docker-proxy ./cmd/proxy
 %endif
